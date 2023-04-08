@@ -297,7 +297,7 @@ class Parser
 
         while (!in_array($token->value, array("{", ";"))) {
             $block->code .= $token->value;
-            if (in_array($token->name, array("T_NS_SEPARATOR", "T_STRING"))) {
+            if (in_array($token->name, array("T_NS_SEPARATOR", "T_STRING", "T_NAME_QUALIFIED"))) {
                 $block->name .= $token->value;
             }
             $tokens->next();
